@@ -1,5 +1,15 @@
-# Vue 3 + TypeScript + Vite
+# Task A & (Task B)
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+1. Den Projektordner im Terminal öffnen und mit "npm install" alle Abhängigkeiten installieren.
+2. Den Server starten mit "npm run dev".
+3. Den localhost Link im Browser öffnen "https://localhost:####".
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+
+Struktur des Projektes:
+- src/components/Counter.vue = Ist Aufgabe A
+- src/components/TodoApp.vue, TodoList.vue, TodoItem.vue = Ist Aufgabe B
+- src/Types.ts = Ist das TypeScript Interface Todo
+- src/App.vue = Sie bindet beide Komponenten ein
+
+Erklärung warum nur Aufgabe A:
+Da ich noch keine Erfahrung mit TypeScript und Vue habe, habe ich Aufgabe A ausgewählt. Jedoch konnte ich mithilfe von KI Aufgabe B lösen, aber wollte sie aus diesem Grund auch nicht abgeben. Ich habe Aufgabe B in src/App.vue auskommentiert, sollten Sie es sich trotzdem anschauen wollen können Sie das auskommentierte wieder aktivieren.

@@ -6,5 +6,5 @@ import TodoApp from './components/TodoApp.vue'
 <template>
   <Counter/>
   <hr />
-  <TodoApp/>
+<!--  <TodoApp/> -->
 </template>

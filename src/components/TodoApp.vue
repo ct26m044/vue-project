@@ -4,8 +4,8 @@ import type { Todo } from '../Types'
 import TodoList from './TodoList.vue'
 
 const todos = ref<Todo[]>([
-  { id: 1, text: 'Task A', done: false },
-  { id: 2, text: 'Task B', done: false },
+  {id: 1, text: 'Task A', done: false},
+  {id: 2, text: 'Task B', done: false},
 ])
 
 const newTodoText = ref('')
@@ -13,7 +13,7 @@ const filter = ref<'all' | 'open' | 'done'>('all')
 
 function addTodo() {
   if (!newTodoText.value.trim()) return
-  todos.value.push({ id: Date.now(), text: newTodoText.value.trim(), done: false })
+  todos.value.push({id: Date.now(), text: newTodoText.value.trim(), done: false})
   newTodoText.value = ''
 }
 
@@ -27,8 +27,7 @@ function deleteTodo(id: number) {
 }
 
 const filteredTodos = computed(() =>
-  todos.value.filter((t) => filter.value === 'all' || (filter.value === 'open') === !t.done)
-)
+  todos.value.filter((t) => filter.value === 'all' || (filter.value === 'open') === !t.done))
 
 </script>
 
@@ -42,21 +41,21 @@ const filteredTodos = computed(() =>
     </form>
 
     <div class="filters">
-      <button :class="{ active: filter === 'all' }" @click="filter = 'all'">All</button>
-      <button :class="{ active: filter === 'open' }" @click="filter = 'open'">Open</button>
-      <button :class="{ active: filter === 'done' }" @click="filter = 'done'">Done</button>
+      <button :class="{active: filter === 'all'}" @click="filter = 'all'">All</button>
+      <button :class="{active: filter === 'open'}" @click="filter = 'open'">Open</button>
+      <button :class="{active: filter === 'done'}" @click="filter = 'done'">Done</button>
     </div>
-
+    
     <TodoList :todos="filteredTodos" @toggle="toggleTodo" @delete="deleteTodo"/>
   </div>
 
 </template>
 
 <style scoped>
-.todo-app { max-width: 400px; margin: 2rem auto; font-family: sans-serif; }
-.add-form { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+.todo-app {max-width: 400px; margin: 2rem auto; font-family: sans-serif;}
+.add-form {display: flex; gap: 0.5rem; margin-bottom: 1rem;}
 .add-form input { flex: 1; }
-.filters { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
-.filters button.active { font-weight: bold; text-decoration: underline; }
+.filters {display: flex; gap: 0.5rem; margin-bottom: 1rem;}
+.filters button.active { font-weight: bold; text-decoration: underline;}
 
 </style>

@@ -20,8 +20,7 @@ const emit = defineEmits<{
       :key="todo.id"
       :todo="todo"
       @toggle="emit('toggle', $event)"
-      @delete="emit('delete', $event)"
-    />
+      @delete="emit('delete', $event)"/>
   </ul>
 
 </template>
